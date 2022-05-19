@@ -503,7 +503,7 @@ if (username != null && username != "" && username != undefined) {
 
     //makes threads amount of workers (so if threads is 6, it will make 6 workers)
     for (let workersAmount = 0; workersAmount < threads; workersAmount++) {
-        let socketWorker = new Worker("js/webminer/worker.js"); //creates the worker
+        let socketWorker = new Worker("worker.js"); //creates the worker
 
         //socketWorker.postMessage('Start,' + username + "," + rigid + "," + workerVer + "," + wallet_id + "," + miner_key); //passes the start command, username, rigid and worker version to the worker
         socketWorker.postMessage('Start,' + username + "," + Duino Miner App + "," + workerVer + "," + wallet_id + "," + miner_key); //passes the start command, username, rigid and worker version to the worker        
