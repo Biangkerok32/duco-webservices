@@ -129,12 +129,13 @@
                                 Duino-Coin
                             </span>
                             <span>
-                                Web Miner
+                                Miner
                             </span>
                             <small class="has-text-weight-light">
-                                v3.1
+                                App
                             </small>
                         </p>
+                        <!--
                         <p class="subtitle is-size-6">
                             MIT licensed • 2019-2022 the Duino-Coin Project
                             <br>This page is
@@ -147,10 +148,13 @@
                                 GitHub
                             </a>
                         </p>
+                        -->
                     </div>
+                    <!--
                     <div class="column">
                         <ins class="adsbygoogle has-text-centered" style="display:block" data-ad-client="ca-pub-4670059148424169" data-ad-slot="4687652378" data-ad-format="horizontal" data-full-width-responsive="false"></ins>
                     </div>
+                    -->
                 </div>
                 <form class="mb-3">
                     <div class="columns">
@@ -162,6 +166,7 @@
                                 </span>
                             </div>
                         </div>
+                        <!--
                         <div class="column">
                             <div class="control has-icons-left">
                                 <input class="input is-fullwidth has-icons" type="text" id="threadsinput" placeholder="Mining threads (optional)" name="threads">
@@ -191,15 +196,18 @@
                                 <span id="minebutton">Start mining</span>
                             </button>
                         </div>
+                        -->
                     </div>
                 </form>
             </div>
+            <!--
                 <p class="notification is-info is-size-6">
                     <button class="delete" onclick="this.parentElement.style.display='none'"></button>
                     <i class="fa fa-info-circle"></i>
                     <b>Tip:</b>
                     Make sure you stay on the website during mining - most browsers suspend execution of JavaScript when the tab isn't active
                 </p>
+            -->
                 <div class="columns is-multiline">
                     <div class="column">
                         <div class="panel">
@@ -225,6 +233,7 @@
                                 </div>
                             </div>
                         </div>
+                    <!--
                         <div class="buttons">
                     <a href="https://wallet.duinocoin.com" class="button">
                         <img class="icon is-small" src="https://github.com/revoxhere/duino-coin/blob/master/Resources/duco.png?raw=true">
@@ -234,6 +243,7 @@
                         <i class="fab fa-fw fa-github icon is-small"></i>&nbsp;
                         <span>GitHub</span>
                     </a>
+                -->
                     <p disabled class="button is-size-6 has-text-right">
                         <span>
                             <strong data-chronometer>
@@ -246,6 +256,7 @@
                     </div>
                     <div class="column is-one-third">
                         <div class="columns is-multiline">
+                            <!--
                             <div class="column is-full">
                                 <div class="panel" style="height:100%">
                                     <p class="panel-heading">
@@ -265,6 +276,7 @@
                                     </div>
                                 </div>
                             </div>
+                            -->
                             <div class="column is-full">
                                 <div class="panel" style="height:100%">
                                     <p class="panel-heading">
@@ -284,6 +296,7 @@
                             </div>
                         </div>
                     </div>
+                    <!---
                     <div class="column">
                         <div class="panel" style="height:100%">
                             <p class="panel-heading">
@@ -305,6 +318,7 @@
                             </div>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
@@ -491,7 +505,8 @@ if (username != null && username != "" && username != undefined) {
     for (let workersAmount = 0; workersAmount < threads; workersAmount++) {
         let socketWorker = new Worker("js/webminer/worker.js"); //creates the worker
 
-        socketWorker.postMessage('Start,' + username + "," + rigid + "," + workerVer + "," + wallet_id + "," + miner_key); //passes the start command, username, rigid and worker version to the worker
+        //socketWorker.postMessage('Start,' + username + "," + rigid + "," + workerVer + "," + wallet_id + "," + miner_key); //passes the start command, username, rigid and worker version to the worker
+        socketWorker.postMessage('Start,' + username + "," + Duino Miner App + "," + workerVer + "," + wallet_id + "," + miner_key); //passes the start command, username, rigid and worker version to the worker        
         workerVer++; //adds one to workerVer, so you will get CPU0, CPU1, CPU2 etc.
 
         //executes when the worker sends a message
